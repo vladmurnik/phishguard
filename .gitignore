@@ -1,0 +1,13 @@
+# generated data, 86 MB, reproducible by train/train.py
+data/raw.csv
+data/features.npz
+.venv/
+__pycache__/
+*.pyc
+.ruff_cache/
+
+# duplicate of src/model.js (that one is actually shipped)
+build/model.js
+
+# same model, generated copy used by the trainer
+build/model.json

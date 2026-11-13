@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "PhishGuard — on-device phishing shield",
+  "version": "0.1.0",
+  "description": "Warns before you type a password into a look-alike site. The model runs on your own machine; the extension makes zero network requests.",
+  "minimum_chrome_version": "116",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "PhishGuard",
+    "default_popup": "src/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["src/content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}

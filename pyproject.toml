@@ -1,0 +1,32 @@
+[project]
+name = "phishguard-train"
+version = "0.1.0"
+description = "Training pipeline for the PhishGuard browser extension: URL features, LightGBM, dependency-free export"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Vladislav Murnik" }]
+keywords = [
+  "phishing-detection",
+  "lightgbm",
+  "browser-extension",
+  "local-first",
+  "url-classification",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=1.26",
+  "scikit-learn>=1.5",
+  "lightgbm>=4.3",
+]
+
+[tool.uv]
+package = false
