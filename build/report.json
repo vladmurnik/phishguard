@@ -1,0 +1,18 @@
+{
+  "n_train": 726631,
+  "n_test": 159087,
+  "phishing_share_test": 0.31564489870322526,
+  "roc_auc": 0.940743372460138,
+  "pr_auc": 0.9022412974421156,
+  "recall_at_1pct_fpr": 0.5331872946330778,
+  "recall_at_5pct_fpr": 0.7381061435825949,
+  "best_iteration": 299,
+  "fit_seconds": 9.5,
+  "split": "grouped by registrable domain (blake2b bucket 0 == test)",
+  "random_split_roc_auc": 0.9621970069039018,
+  "random_split_recall_at_1pct_fpr": 0.6456860866578695,
+  "init_score": -6e-06,
+  "max_bias_uncertainty": 6.0902625965082395e-06,
+  "model_bytes": 766195,
+  "n_trees": 299
+}
