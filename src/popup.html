@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<style>
+  :root { color-scheme: dark; }
+  body {
+    width: 340px; margin: 0; padding: 14px;
+    font: 13px/1.5 -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: #14161a; color: #e8eaed;
+  }
+  h1 { font-size: 13px; margin: 0 0 2px; font-weight: 700; letter-spacing: .2px; }
+  .sub { opacity: .55; font-size: 11px; margin-bottom: 12px; }
+  .host { font-family: ui-monospace, Consolas, monospace; font-size: 12px;
+          word-break: break-all; opacity: .8; }
+  .score { display: flex; align-items: baseline; gap: 8px; margin: 10px 0 6px; }
+  .pct { font-size: 30px; font-weight: 700; letter-spacing: -1px; }
+  .tag { font-size: 11px; padding: 2px 8px; border-radius: 999px; font-weight: 600; }
+  .tag.danger { background: #4a1515; color: #ff9b9b; }
+  .tag.warn { background: #43320c; color: #ffd479; }
+  .tag.safe { background: #10331a; color: #8ee6a4; }
+  .bar { height: 6px; border-radius: 3px; background: #262a31; overflow: hidden; }
+  .bar > i { display: block; height: 100%; border-radius: 3px; }
+  ul { list-style: none; margin: 12px 0 0; padding: 0; }
+  li { padding: 6px 0; border-top: 1px solid #23262c; display: flex; gap: 8px; }
+  li .g { flex: 1; opacity: .85; }
+  li .w { font-family: ui-monospace, monospace; font-size: 11px; opacity: .5; }
+  .foot { margin-top: 12px; padding-top: 10px; border-top: 1px solid #23262c;
+          opacity: .5; font-size: 11px; }
+  button { font: inherit; font-size: 11px; background: #23262c; color: #cfd3da;
+           border: 1px solid #333842; border-radius: 6px; padding: 4px 8px; cursor: pointer; }
+</style>
+</head>
+<body>
+  <h1>PhishGuard</h1>
+  <div class="sub">модель считается локально · 0 сетевых запросов</div>
+  <div class="host" id="host">—</div>
+  <div class="score">
+    <span class="pct" id="pct">—</span>
+    <span class="tag" id="tag">проверяется</span>
+  </div>
+  <div class="bar"><i id="fill" style="width:0%;background:#666"></i></div>
+  <ul id="why"></ul>
+  <div class="foot"><span id="meta">—</span><br><br>
+    <button id="toggle">Разрешить этот домен</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
