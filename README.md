@@ -1,5 +1,7 @@
 # PhishGuard
 
+[Русский](README_RU.md) | English
+
 A Chrome extension that warns you at the moment you are about to type a password
 into a page that looks like a phishing clone.
 
